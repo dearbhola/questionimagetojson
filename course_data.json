@@ -3,8 +3,8 @@
     {
       "id": 1,
       "username": "admin",
-      "password": "scrypt:32768:8:1$SRdHb4Ek9QxsM5Ou$1dce0e739ebdc679529f10cef0da1ba939852596f46736e4c9982bfd3693ebbf58bbaee07112f9252ee1b7b6677a7784410fa07474a5c10eec3b62dda1fc9064",
-      "name": "testing",
+      "password": "pbkdf2:sha256:1000000$nnspefju02SHW1si$350065e388b55c118e23446ea34e288945b6ff8c4fdf03c8afb75c47035e5842",
+      "name": "Admin",
       "role": "teacher",
       "created_at": "2026-06-11 01:45:02"
     }
@@ -12,9 +12,9 @@
   "courses": [
     {
       "id": 1,
-      "name": "testing",
-      "code": "testing",
-      "subject": "testing",
+      "name": "JPSC",
+      "code": "JPSC",
+      "subject": "General Knowledge",
       "difficulty": "easy",
       "marks": 1,
       "description": "",
@@ -23,7 +23,7 @@
           "id": 1,
           "name": "testing",
           "description": "testing",
-          "added_by": "testing",
+          "added_by": "Admin",
           "added_at": "2026-06-11 01:47:17"
         }
       ],
@@ -33,175 +33,2465 @@
           "sl_no": "1",
           "name": "testing",
           "summary": "testing",
-          "added_by": "testing",
+          "added_by": "Admin",
           "added_at": "2026-06-11 01:47:30"
         }
       ],
       "question_sets": [
         {
-          "name": "practice test 1",
-          "type": "practice",
+          "created_at": "2026-06-11 02:16:51",
+          "created_by": "testing",
           "difficulty": "easy",
-          "marks": 1,
+          "edit_history": [
+            {
+              "action": "created",
+              "by": "testing",
+              "at": "2026-06-11 02:16:51"
+            },
+            {
+              "action": "edited",
+              "by": "testing",
+              "at": "2026-06-11 15:17:25"
+            },
+            {
+              "action": "edited",
+              "by": "Admin",
+              "at": "2026-06-11 16:00:11"
+            },
+            {
+              "action": "edited",
+              "by": "testing",
+              "at": "2026-06-11 16:17:55"
+            },
+            {
+              "action": "edited",
+              "by": "testing",
+              "at": "2026-06-11 16:39:12"
+            },
+            {
+              "action": "edited",
+              "by": "testing",
+              "at": "2026-06-11 16:45:27"
+            }
+          ],
+          "id": 1,
           "lesson_id": 1,
-          "skill_id": 1,
+          "marks": 1,
+          "name": "practice test 1",
           "questions": [
             {
+              "correct_answer": "",
+              "difficulty": "easy",
               "id": 1,
+              "marks": 1,
               "question_type": "multiple_choice",
+              "subject": "testing",
               "translations": {
                 "en": {
-                  "question": "In June 2025 , the united states carried out airstrikes on Iranian nuclear sites under what operation name ?",
+                  "explanation": "",
                   "options": {
                     "A": "Operation Desert storm",
                     "B": "Operation Freedom shield",
                     "C": "Operation Midnight Hammer",
                     "D": ""
                   },
-                  "explanation": "",
-                  "translated": false
+                  "question": "In June 2025 , the united states carried out airstrikes on Iranian nuclear sites under what operation name ?"
                 },
                 "hi": {
-                  "question": "जून में अमेरिका ने ईरानी परमाणु स्थलों पर हवाई हमले किस ऑपरेशन नाम के तहत किए थे?",
+                  "explanation": "",
                   "options": {
                     "A": "ऑपरेशन डेजर्ट स्टार्म",
                     "B": "ऑपरेशन फ्रीडम शील्ड",
                     "C": "ऑपरेशन मिडनाइट हैमर",
                     "D": ""
                   },
-                  "explanation": "",
+                  "question": "जून में अमेरिका ने ईरानी परमाणु स्थलों पर हवाई हमले किस ऑपरेशन नाम के तहत किए थे?",
                   "translated": false
                 }
               },
-              "correct_answer": "",
-              "difficulty": "easy",
-              "marks": 1,
-              "subject": "testing",
-              "uploaded_by": "testing",
-              "uploaded_at": "6/11/2026, 2:16:51 AM"
+              "uploaded_at": "6/11/2026, 2:16:51 AM",
+              "uploaded_by": "testing"
             },
             {
+              "correct_answer": "",
+              "difficulty": "easy",
               "id": 2,
+              "marks": 1,
               "question_type": "multiple_choice",
+              "subject": "testing",
               "translations": {
                 "en": {
-                  "question": "Who is the president of the European commission ?",
+                  "explanation": "",
                   "options": {
                     "A": "Antonio Guterres",
                     "B": "Ursula Von Der leyen",
                     "C": "Roberta Metsola",
                     "D": "Antonio Costa"
                   },
-                  "explanation": "",
-                  "translated": false
+                  "question": "Who is the president of the European commission ?"
                 },
                 "hi": {
-                  "question": "यूरोपीय आयोग के अध्यक्ष कौन हैं?",
+                  "explanation": "",
                   "options": {
                     "A": "एंटोनियो गुटेरेस",
                     "B": "उर्सुला वॉन डेर लेयेन",
                     "C": "रोबर्टा मेट्सोला",
                     "D": "एंटोनियो कोस्टा"
                   },
-                  "explanation": "",
+                  "question": "यूरोपीय आयोग के अध्यक्ष कौन हैं?",
                   "translated": true
                 }
               },
-              "correct_answer": "",
-              "difficulty": "easy",
-              "marks": 1,
-              "subject": "testing",
-              "uploaded_by": "testing",
-              "uploaded_at": "6/11/2026, 2:16:51 AM"
+              "uploaded_at": "6/11/2026, 2:16:51 AM",
+              "uploaded_by": "testing"
             },
             {
+              "correct_answer": "",
+              "difficulty": "easy",
               "id": 3,
+              "marks": 1,
               "question_type": "multiple_choice",
+              "subject": "testing",
               "translations": {
                 "en": {
-                  "question": "Which of the following are not the 4 Vs of Big Data ?",
+                  "explanation": "",
                   "options": {
                     "A": "Velocity",
                     "B": "Volume",
                     "C": "Variety",
                     "D": "Verification"
                   },
-                  "explanation": "",
-                  "translated": false
+                  "question": "Which of the following are not the 4 Vs of Big Data ?"
                 },
                 "hi": {
-                  "question": "निम्नलिखित में से कौन-सा बिग डेटा के ४ में शामिल नहीं है?",
+                  "explanation": "",
                   "options": {
                     "A": "वेग",
                     "B": "आयतन",
                     "C": "सत्यापन",
                     "D": ""
                   },
-                  "explanation": "",
+                  "question": "निम्नलिखित में से कौन-सा बिग डेटा के ४ में शामिल नहीं है?",
                   "translated": false
                 }
               },
-              "correct_answer": "",
-              "difficulty": "easy",
-              "marks": 1,
-              "subject": "testing",
-              "uploaded_by": "testing",
-              "uploaded_at": "6/11/2026, 2:16:51 AM"
+              "uploaded_at": "6/11/2026, 2:16:51 AM",
+              "uploaded_by": "testing"
             },
             {
+              "correct_answer": "",
+              "difficulty": "easy",
               "id": 4,
+              "marks": 1,
               "question_type": "multiple_choice",
+              "subject": "testing",
               "translations": {
                 "en": {
-                  "question": "— Which of the following is a variety of finger millet ?",
+                  "explanation": "",
                   "options": {
                     "A": "UPAS 120",
                     "B": "BBM-1",
                     "C": "A404",
                     "D": ""
                   },
-                  "explanation": "",
-                  "translated": false
+                  "question": "— Which of the following is a variety of finger millet ?"
                 },
                 "hi": {
-                  "question": "निम्नलिखित में से कौन मड़ुआ का एक किस्म है? उुि णिन",
+                  "explanation": "",
                   "options": {
                     "A": "पूसा विशाल",
                     "B": "न-१",
                     "C": "",
                     "D": ""
                   },
-                  "explanation": "",
+                  "question": "निम्नलिखित में से कौन मड़ुआ का एक किस्म है? उुि णिन",
                   "translated": false
                 }
               },
-              "correct_answer": "",
-              "difficulty": "easy",
+              "uploaded_at": "6/11/2026, 2:16:51 AM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "D",
+              "difficulty": "medium",
+              "id": 5,
               "marks": 1,
-              "subject": "testing",
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "Maithon Dam",
+                    "B": "Tenughat Dam",
+                    "C": "Konar Dam",
+                    "D": "Tilaiya Dam"
+                  },
+                  "question": "Which dam was constructed at first under Damodar Valley corporation projects ?"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "मैथन बांध",
+                    "B": "तेनुघाट बांध",
+                    "C": "कोनार बांध",
+                    "D": ""
+                  },
+                  "question": "दामोदर घाटी निगम परियोजनाओं के अंतर्गत सबसे पहले किस बांध का निर्माण किया गया था?",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 3:17:25 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 6,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "Ranchi",
+                    "B": "Dhanbad",
+                    "C": "Jamshedpur",
+                    "D": "Dumka"
+                  },
+                  "question": "Where is Jharkhand 's first and floating solar power plant located ?"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "रांची",
+                    "B": "धनबाद",
+                    "C": "जमशेदपुर",
+                    "D": "दुमका"
+                  },
+                  "question": "झारखण्ड का पहला एवं तैरता हुआ सौर ऊर्जा संयंत्र कहाँ स्थित है?",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "11/06/2026, 16:00:10",
+              "uploaded_by": "Admin"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 7,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "1940",
+                    "B": "1943",
+                    "C": "1947",
+                    "D": "1956"
+                  },
+                  "question": "When did the concept of Damodar Valley project germinate in the mind of administration"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "1940",
+                    "B": "1943",
+                    "C": "1947",
+                    "D": "1956"
+                  },
+                  "question": "दामोदर घाटी परियोजना की संकल्पना प्रशासन के मन में कब अंकुरित हुई?",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "11/06/2026, 16:00:10",
+              "uploaded_by": "Admin"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 8,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "Jahanabad",
+                    "B": "Arwal",
+                    "C": "Purniya",
+                    "D": "Pipra"
+                  },
+                  "question": "Promotion of Extremism in Joint Bihar/ Jharkhand was started from which district"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "जहानाबाद",
+                    "B": "अरवल",
+                    "C": "पूर्णिया",
+                    "D": "पिपरा"
+                  },
+                  "question": "संयुक्त बिहार/झारखंड में उग्रवाद को बढ़ावा देने की शुरुआत किस जिले से हुई थी?",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "11/06/2026, 16:00:10",
+              "uploaded_by": "Admin"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 9,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "20.05 percent",
+                    "B": "21.06 percent",
+                    "C": "24.05 percent",
+                    "D": "25.06 percent"
+                  },
+                  "question": "I Mark the correct figure regarding the Jharkhand 's Urbanisation rate 2011 ."
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "20.05 प्रतिशत",
+                    "B": "21.06 प्रतिशत",
+                    "C": "24.05 प्रतिशत",
+                    "D": "25.06 प्रतिशत"
+                  },
+                  "question": "मैं झारखंड की शहरीकरण दर 2011 के संबंध में सही आंकड़ा चिह्नित करता हूं।",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 10,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "64.41 percent and 70.00 percent",
+                    "B": "66.41 percent and 79.3 percent",
+                    "C": "69.30 percent and 85.00 percent",
+                    "D": "79.00 percent and 85.00 percent"
+                  },
+                  "question": "I Mark the correct figures of literacy growth rate in Jharkhand during 2011 and 2022 census respectively"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "64.41 प्रतिशत और 70.00 प्रतिशत",
+                    "B": "66.41 प्रतिशत और 79.3 प्रतिशत",
+                    "C": "69.30 प्रतिशत और 85.00 प्रतिशत",
+                    "D": "79.00 प्रतिशत और 85.00 प्रतिशत"
+                  },
+                  "question": "मैं क्रमशः 2011 और 2022 की जनगणना के दौरान झारखंड में साक्षरता वृद्धि दर के सही आंकड़े चिह्नित करता हूं",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 11,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "64.41 percent",
+                    "B": "65.40 percent",
+                    "C": "66.41 percent",
+                    "D": "69.41 percent"
+                  },
+                  "question": "Mark the correct figure of literacy rate in Jharkhand during 2011 census ?"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "64.41 प्रतिशत",
+                    "B": "65.40 प्रतिशत",
+                    "C": "66.41 प्रतिशत",
+                    "D": "69.41 प्रतिशत"
+                  },
+                  "question": "2011 की जनगणना के दौरान झारखंड में साक्षरता दर का सही आंकड़ा चिह्नित करें?",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 12,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "10.09 lakh and 90.50 lakh",
+                    "B": "18.29 lakh and 86.45 lakh",
+                    "C": "15.19 lakh and 87.46 lakh",
+                    "D": "16.15 lakh and 96.45 lakh"
+                  },
+                  "question": "Which one is correct figure regarding the Tribal population growth in Jharkhand during 1901 and 2011 census respectively ?"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "10.09 लाख और 90.50 लाख",
+                    "B": "18.29 लाख और 86.45 लाख",
+                    "C": "15.19 लाख और 87.46 लाख",
+                    "D": "16.15 लाख और 96.45 लाख"
+                  },
+                  "question": "क्रमशः 1901 और 2011 की जनगणना के दौरान झारखंड में आदिवासी जनसंख्या वृद्धि के संबंध में कौन सा सही आंकड़ा है?",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 13,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "2lakh",
+                    "B": "2.5 lakh",
+                    "C": "3lakh",
+                    "D": "1.5lakh"
+                  },
+                  "question": "Whatis the amount of Rehabilitation grants ( immediate ) ?"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "2 लाख",
+                    "B": "2.5 लाख",
+                    "C": "3 लाख",
+                    "D": "1.5 लाख"
+                  },
+                  "question": "पुनर्वास अनुदान की राशि (तत्काल) क्या है?",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 14,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "Superintendent of Police",
+                    "B": "Deputy Commissioner",
+                    "C": "Village Head",
+                    "D": "Chief Secretary"
+                  },
+                  "question": "I Under the Rehabilitation policy , who is the chairman of the District Level Rehabilitation Committee ?"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "पुलिस अधीक्षक",
+                    "B": "उप आयुक्त",
+                    "C": "ग्राम प्रधान",
+                    "D": "प्रमुख शासन सचिव"
+                  },
+                  "question": "पुनर्वास नीति के अंतर्गत जिला स्तरीय पुनर्वास समिति का अध्यक्ष कौन होता है ?",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 15,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "to discourage industrial investment",
+                    "B": "to encourage industrial investment",
+                    "C": "acquisition of agricultural land",
+                    "D": "None of these"
+                  },
+                  "question": "What is the main objective of forming ‘ Economic Zone ' in case of displacement and rehabilitation in Jnarkhand ?"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "औद्योगिक निवेश को हतोत्साहित करना",
+                    "B": "औद्योगिक निवेश को प्रोत्साहित करना",
+                    "C": "कृषि भूमि का अधिग्रहण",
+                    "D": "इनमें से कोई नहीं"
+                  },
+                  "question": "जनर्खंड में विस्थापन एवं पुनर्वास की स्थिति में 'आर्थिक क्षेत्र' बनाने का मुख्य उद्देश्य क्या है?",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 16,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "Tropical Forest",
+                    "B": "Sub - tropical Forest",
+                    "C": "Temperature Forest",
+                    "D": "Alpine Temperature Forest"
+                  },
+                  "question": "Identify the types of forest in Jharkhand ?"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "उष्णकटिबंधीय वन",
+                    "B": "उप-उष्णकटिबंधीय वन",
+                    "C": "तापमान वन",
+                    "D": "अल्पाइन तापमान वन"
+                  },
+                  "question": "झारखण्ड में वनों के प्रकार बताइये?",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 17,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "AsandAmw",
+                    "B": "Cwg and Aw",
+                    "C": "Eandeét",
+                    "D": ""
+                  },
+                  "question": "Whichof the following climatic regions are available in Jharkhand according to Koppen 's scheme"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "AsandAmw",
+                    "B": "Cwg और Aw",
+                    "C": "एन्डीट",
+                    "D": ""
+                  },
+                  "question": "कोपेन की योजना के अनुसार झारखंड में निम्नलिखित में से कौन सा जलवायु क्षेत्र उपलब्ध है?",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 18,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "Chawal pani",
+                    "B": "Tetulia",
+                    "C": "Dhunipani ,",
+                    "D": "Babeha"
+                  },
+                  "question": "Which of the following Hot water spring is present in Jharkhand ?"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "चावल पानी",
+                    "B": "तेतुलिया",
+                    "C": "धूनीपानी,",
+                    "D": "बबेहा"
+                  },
+                  "question": "निम्नलिखित में से कौन सा गर्म पानी का झरना झारखंड में मौजूद है?",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 19,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "Triassic , Jurassic , Cretaceous",
+                    "B": "Cambrian , Ordovician , Silurian",
+                    "C": "Pliocene , Pleistocene , Holocene",
+                    "D": ""
+                  },
+                  "question": "— Whichis the Calm period in the Geological History of Jharkhand ? A ) Eocene , Oligocene , Miocene , Periods"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "ट्राइऐसिक, जुरासिक, क्रेटेशियस",
+                    "B": "कैंब्रियन, ऑर्डोविशियन, सिलुरियन",
+                    "C": "प्लियोसीन, प्लेइस्टोसिन, होलोसीन",
+                    "D": ""
+                  },
+                  "question": "— झारखंड के भूवैज्ञानिक इतिहास में शांत काल कौन सा है? ए) इओसीन, ओलिगोसीन, मियोसीन, काल",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 20,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "( i ) , ( i ) , ( ili ) , iv )",
+                    "B": "Gi ) , ( ii ) , ( iv ) , ( i )",
+                    "C": "( ii ) , ( iv ) , ( i ) , Gi )",
+                    "D": "( iv ) , ( i ) , ( i ) , ( ii )"
+                  },
+                  "question": "Whichis the correct sequence according to the establishment period of the mentioned colleges in Jharkhand ? i ) — GLAcollege , Daltonganj ii ) St. Colamba 's College , Hazaribagh iii ) I Ranchi College , Ranchi iv ) St. Xavier 's College , Ranchi"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "( मैं ) , ( मैं ) , ( इली ) , iv )",
+                    "B": "Gi ) , ( ii ) , ( iv ) , ( i )",
+                    "C": "(ii) , (iv) , (i) , Gi )",
+                    "D": "(iv) , (i) , (i) , (ii)"
+                  },
+                  "question": "झारखण्ड में उल्लिखित महाविद्यालयों की स्थापना अवधि के अनुसार सही क्रम कौन सा है? i ) - GLAcollege, डाल्टनगंज ii ) सेंट कोलंबा कॉलेज, हज़ारीबाग iii ) I रांची कॉलेज, रांची iv ) सेंट जेवियर्स कॉलेज, रांची",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 21,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "10 to 20 percent",
+                    "B": "20 to 30 percent",
+                    "C": "30 to 40 percent",
+                    "D": "40 to 50 percent"
+                  },
+                  "question": "What is the percentage range of Forest area in Jharkhand at present ?"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "10 से 20 प्रतिशत",
+                    "B": "20 से 30 प्रतिशत",
+                    "C": "30 से 40 प्रतिशत",
+                    "D": "40 से 50 प्रतिशत"
+                  },
+                  "question": "वर्तमान में झारखण्ड में वन क्षेत्र का प्रतिशत क्षेत्र कितना है?",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 22,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "Reserved Forest",
+                    "B": "Protected Forest",
+                    "C": "Unclassified Forest",
+                    "D": ""
+                  },
+                  "question": "Which is the largest forest area in Jharkhand ?"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "आरक्षित वन",
+                    "B": "संरक्षित वन",
+                    "C": "अवर्गीकृत वन",
+                    "D": ""
+                  },
+                  "question": "झारखण्ड में सबसे बड़ा वन क्षेत्र कौन सा है?",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 23,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "2005",
+                    "B": "Jamshedpur",
+                    "C": "2010",
+                    "D": "Ranchi ( BD )"
+                  },
+                  "question": "In which year was the Rehabilitation and 47 , Bas Resettlement policy notified in the state of ag sift Jharkhand ? ."
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "2005",
+                    "B": "जमशेदपुर",
+                    "C": "2010",
+                    "D": "रांची (बीडी)"
+                  },
+                  "question": "एजी सिफ्ट झारखंड राज्य में पुनर्वास एवं 47, बास पुनर्वास नीति किस वर्ष अधिसूचित की गई थी? .",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 24,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "Individual ownership Created by the",
+                    "B": "Collective village ownership without",
+                    "C": "Joint ancestral ownership based on '",
+                    "D": "Temporary tenancy granted by"
+                  },
+                  "question": "The concept of \" Khuntkatti ” under the 41 . Chota Nagpur Tenancy Act , 1908 implies :"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "व्यक्तिगत स्वामित्व द्वारा निर्मित",
+                    "B": "सामूहिक ग्राम स्वामित्व बिना",
+                    "C": "संयुक्त पैतृक स्वामित्व 'के आधार पर",
+                    "D": "द्वारा दी गई अस्थायी किरायेदारी"
+                  },
+                  "question": "41 के अंतर्गत \"खुंटकट्टी\" की अवधारणा। छोटा नागपुर किरायेदारी अधिनियम, 1908 का तात्पर्य है:",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 25,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "British Parliament",
+                    "B": "Governor - General in council wy ,",
+                    "C": "East India Company",
+                    "D": "Provincial legislature I"
+                  },
+                  "question": "Which colonia ! authority enacted the 42 . Chota Nagpur Tenancy Act , 1908 ?"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "ब्रिटिश संसद",
+                    "B": "काउंसिल में गवर्नर-जनरल,",
+                    "C": "ईस्ट इंडिया कंपनी",
+                    "D": "प्रांतीय विधायिका I"
+                  },
+                  "question": "कौन सा कोलोनिया! प्राधिकरण ने 42 अधिनियमित किया। छोटा नागपुर किरायेदारी अधिनियम, 1908?",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 26,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "2000 (",
+                    "B": "2001 U4",
+                    "C": "2002 (",
+                    "D": "2003 ("
+                  },
+                  "question": "When was the first industrial policy of 43 . 3 Jharkhand declared ? 7"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "2000 (",
+                    "B": "2001 यू4",
+                    "C": "2002 (",
+                    "D": "2003 ("
+                  },
+                  "question": "43. की ​​पहली औद्योगिक नीति कब थी? 3 झारखंड घोषित? 7",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 27,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "First uf",
+                    "B": "Second (",
+                    "C": "Third (",
+                    "D": "Fourth ("
+                  },
+                  "question": "— inwhich Five - Year plan was Bokaro steel 44 . f plant established ? z"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "सबसे पहले यू.एफ",
+                    "B": "दूसरा (",
+                    "C": "तीसरा (",
+                    "D": "चौथा ("
+                  },
+                  "question": "-बोकारो स्टील किस पंचवर्षीय योजना में था? एफ प्लांट स्थापित? जेड",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 28,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "West Singhbhum",
+                    "B": "Saraikela",
+                    "C": "Dhanbad",
+                    "D": "Kodarma —"
+                  },
+                  "question": "In which District soil erosion is higher in Jharkhand ?"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "पश्चिमी सिंहभूम",
+                    "B": "Saraikela",
+                    "C": "धनबाद",
+                    "D": "कोडरमा—"
+                  },
+                  "question": "झारखंड में किस जिले में मिट्टी का कटाव अधिक है?",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 29,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "Percentage of fallow land increasing",
+                    "B": "Percentage of fallow land",
+                    "C": "Percentage of fallow land is not ‘",
+                    "D": "None of these"
+                  },
+                  "question": "What is the correct status of Fallow land for last five years in Jnarkhand ?"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "परती भूमि का प्रतिशत बढ़ रहा है",
+                    "B": "परती भूमि का प्रतिशत",
+                    "C": "परती भूमि का प्रतिशत 'नहीं' है",
+                    "D": "इनमें से कोई नहीं"
+                  },
+                  "question": "जनार्खंड में पिछले पांच वर्षों में परती भूमि की सही स्थिति क्या है?",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 30,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "Damodar River",
+                    "B": "Jumar River",
+                    "C": "",
+                    "D": ""
+                  },
+                  "question": "According to the report of Central Pollution Control Board ( CPCB ) 2019 - 2021 on the basis of BOD Which river is more polluted k ( A ) Subarnrekha River : ( B ) Kharkai River ."
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "दामोदर नदी",
+                    "B": "जुमर नदी",
+                    "C": "",
+                    "D": ""
+                  },
+                  "question": "केंद्रीय प्रदूषण नियंत्रण बोर्ड (CPCB) की रिपोर्ट 2019 - 2021 के अनुसार BOD के आधार पर कौन सी नदी अधिक प्रदूषित है k (A) सुवर्णरेखा नदी: (B) खरकई नदी।",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 31,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "Dumka , Sahibganj , Godda , Deoghar",
+                    "B": "Gumla , Garwah , Giridih , Pakur",
+                    "C": "Dhanbad , Jam tara , Bokaro ,",
+                    "D": ""
+                  },
+                  "question": "Under Santal Parganas Tenancy Act , 1949 Santal paraganas divisions composing of"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "दुमका, साहिबगंज, गोड्डा, देवघर",
+                    "B": "गुमला, गढ़वा, गिरिडीह, पाकुड़",
+                    "C": "धनबाद, जाम तारा, बोकारो,",
+                    "D": ""
+                  },
+                  "question": "संताल परगना किरायेदारी अधिनियम, 1949 के तहत संताल परगना प्रभागों की रचना",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 32,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "Art . 14 - Equality before law",
+                    "B": "Art . 19 - Freedom of movement",
+                    "C": "Art . 244 - Scheduled areas",
+                    "D": "Art . 300A - Right to property"
+                  },
+                  "question": "From a constitutional stand point , the Santal paragnas Act , 1949 is most closely linked with"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "कला । 14 - कानून के समक्ष समानता",
+                    "B": "कला । 19 - आंदोलन की स्वतंत्रता",
+                    "C": "कला । 244-अनुसूचित क्षेत्र",
+                    "D": "कला । 300ए - संपत्ति का अधिकार"
+                  },
+                  "question": "संवैधानिक दृष्टिकोण से, संताल परगना अधिनियम, 1949 सबसे निकट से जुड़ा हुआ है",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 33,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "Freely allowed",
+                    "B": "Allowed with village consent",
+                    "C": "Completely prohibited ( with limited",
+                    "D": "Allowed after registration"
+                  },
+                  "question": "Under the Chota Nagpur , Tenancy Act,1908 transfer of tribal land to non tribal - tribals is :"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "स्वतंत्र रूप से अनुमति है",
+                    "B": "गांव की सहमति से अनुमति दी गई",
+                    "C": "पूर्णतः प्रतिबंधित (सीमित के साथ)।",
+                    "D": "पंजीकरण के बाद अनुमति दी गई"
+                  },
+                  "question": "छोटा नागपुर, किरायेदारी अधिनियम, 1908 के तहत आदिवासी भूमि का गैर आदिवासी को हस्तांतरण - आदिवासियों को है:",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 34,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "High court",
+                    "B": "Deputy Commissioner",
+                    "C": "Gram Sabha",
+                    "D": "State Legislature"
+                  },
+                  "question": "Which authority has the power under Chota Nagpur Tenancy Act , 1908 to restore illegally transferred tribal land ?"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "उच्च न्यायालय",
+                    "B": "उप आयुक्त",
+                    "C": "ग्राम सभा",
+                    "D": "राज्य विधानमंडल"
+                  },
+                  "question": "अवैध रूप से हस्तांतरित आदिवासी भूमि को बहाल करने के लिए छोटा नागपुर किरायेदारी अधिनियम, 1908 के तहत किस प्राधिकरण के पास शक्ति है?",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 35,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "Cambrian Period",
+                    "B": "Devonian to Permian period",
+                    "C": "Jurassic Period",
+                    "D": "Oligocene Period"
+                  },
+                  "question": "Give the correct option regarding the , formation period of Damodar River Valley"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "कैम्ब्रियन काल",
+                    "B": "डेवोनियन से पर्मियन काल तक",
+                    "C": "जुरासिक काल",
+                    "D": "ओलिगोसीन काल"
+                  },
+                  "question": "दामोदर नदी घाटी के निर्माण काल ​​के संबंध में सही विकल्प दीजिए",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 36,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "( i ) , ( ii ) , ( iii )",
+                    "B": "( ii ) , Gili ) , ( i )",
+                    "C": "( iii ) , ( ) , Gi )",
+                    "D": "di ) , ( i ) , Gili ) ,"
+                  },
+                  "question": "Which is the correct sequence of under mentioned Research institutions according to their establishment period : i ) Indian Lakh Research Institute , Ranchi ii ) I Central Fuel Research Institute , Jalgoda iii ) I Central Mining Research Institute , Dhanbad"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "(i) , (ii) , (iii)",
+                    "B": "(ii) , गिली ) , ( i )",
+                    "C": "(iii) , ( ) , Gi )",
+                    "D": "डि ) , ( आई ) , गिली ) ,"
+                  },
+                  "question": "निम्नलिखित अनुसंधान संस्थानों का उनकी स्थापना अवधि के अनुसार सही क्रम कौन सा है: i) भारतीय लाख अनुसंधान संस्थान, रांची ii) I केंद्रीय ईंधन अनुसंधान संस्थान, जलगोड़ा iii) I केंद्रीय खनन अनुसंधान संस्थान, धनबाद",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 37,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "( i ) , Gii ) , ( iv ) , ( ili )",
+                    "B": "( i ) , Gi ) , Gil ) , ( iv )",
+                    "C": "( iv ) , ( i ) , Gi ) , Gil )",
+                    "D": "( ii ) , ( ii ) , ( iv ) , ( )"
+                  },
+                  "question": "I Which is the correct sequence of the universities according to their establishment period in Jharkhand area ? i ) Ranchi University , Ranchi ii ) Birsa Agriculture University , Ranchi iii ) Nilambar- Pitambar University , Dattonganj iv ) Sidhu- Kanhu University , Dumka"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "( i ) , Gii ) , ( iv ) , ( ili )",
+                    "B": "(i) , Gi ) , गिल ) , ( iv )",
+                    "C": "( iv ) , ( i ) , Gi ) , गिल )",
+                    "D": "(ii) , (ii) , (iv) , ( )"
+                  },
+                  "question": "I झारखंड क्षेत्र में स्थापना काल के अनुसार विश्वविद्यालयों का सही क्रम कौन सा है? i ) रांची विश्वविद्यालय, रांची ii ) बिरसा कृषि विश्वविद्यालय, रांची iii ) नीलांबर- पीतांबर विश्वविद्यालय, दत्तनगंज iv ) सिद्धु- कान्हू विश्वविद्यालय, दुमका",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 38,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "Individual ownership Created by the",
+                    "B": "Joint ancestral ownership based on '",
+                    "C": "Temporary tenancy granted by",
+                    "D": ""
+                  },
+                  "question": "The concept of Khuntkatti \" under the 41 . Chota Nagpur Tenancy Act , 1908 implies :"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "व्यक्तिगत स्वामित्व द्वारा निर्मित",
+                    "B": "संयुक्त पैतृक स्वामित्व 'के आधार पर",
+                    "C": "द्वारा दी गई अस्थायी किरायेदारी",
+                    "D": ""
+                  },
+                  "question": "खुंटकट्टी की अवधारणा \"41 के तहत। छोटा नागपुर किरायेदारी अधिनियम, 1908 का तात्पर्य है:",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 39,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "British Parliament I",
+                    "B": "Governor - General in council ww ,",
+                    "C": "East India Company (",
+                    "D": "Provincial legislature ("
+                  },
+                  "question": "Which colonial authority enacted the 42 . Chota Nagpur Tenancy Act , 1908 ?"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "ब्रिटिश संसद I",
+                    "B": "काउंसिल में गवर्नर-जनरल ww,",
+                    "C": "ईस्ट इंडिया कंपनी (",
+                    "D": "प्रांतीय विधायिका ("
+                  },
+                  "question": "42 किस औपनिवेशिक प्राधिकारी ने अधिनियमित किया? छोटा नागपुर किरायेदारी अधिनियम, 1908?",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 40,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "First uf",
+                    "B": "Third (",
+                    "C": "Fourth (",
+                    "D": "Second ("
+                  },
+                  "question": "When was the first industrial policy of 43 , 3 Jharkhand declared ? 7"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "सबसे पहले यू.एफ",
+                    "B": "तीसरा (",
+                    "C": "चौथा (",
+                    "D": "दूसरा ("
+                  },
+                  "question": "43, 3 झारखंड की पहली औद्योगिक नीति कब घोषित की गई थी? 7",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 41,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "( D ) itlies entirely in non - scheduled area ( D )",
+                    "B": "Supreme court direction to declare ( B )",
+                    "C": "It promotes urban local bodies",
+                    "D": "It transfer power from state to centre )"
+                  },
+                  "question": "Which of the following correctly explains 31 , WES the significance of PESA , 1996 in aan Jharkhand ?"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "(डी) यह पूरी तरह से गैर-अनुसूचित क्षेत्र में है (डी)",
+                    "B": "(बी) घोषित करने के लिए सुप्रीम कोर्ट का निर्देश",
+                    "C": "यह शहरी स्थानीय निकायों को बढ़ावा देता है",
+                    "D": "यह राज्य से केंद्र को सत्ता हस्तांतरित करता है)"
+                  },
+                  "question": "निम्नलिखित में से कौन 31 को सही ढंग से समझाता है, क्या झारखंड में पेसा, 1996 का महत्व है?",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 42,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "60.68 lakh and 329.88 lakh",
+                    "B": "50.56 lakh and 330.09 lakh",
+                    "C": "§ 6.52 lakh and 390.10 lakh",
+                    "D": "15.00 lakh and 395.20 lakh"
+                  },
+                  "question": "Which one is correct figure regarding the population growth in Jharkhand during 1901 and 2011 census respectively :"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "60.68 लाख और 329.88 लाख",
+                    "B": "50.56 लाख और 330.09 लाख",
+                    "C": "§ 6.52 लाख और 390.10 लाख",
+                    "D": "15.00 लाख और 395.20 लाख"
+                  },
+                  "question": "क्रमशः 1901 और 2011 की जनगणना के दौरान झारखंड में जनसंख्या वृद्धि के संबंध में कौन सा सही आंकड़ा है:",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 43,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "2012 - 13",
+                    "B": "I 2015 - 16",
+                    "C": "2021 - 22",
+                    "D": ""
+                  },
+                  "question": "When was the ' Mukhyamantri Jan Van Yojna ' launched in Jharkhand ?"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "2012 - 13",
+                    "B": "मैं 2015 - 16",
+                    "C": "2021 - 22",
+                    "D": ""
+                  },
+                  "question": "झारखण्ड में 'मुख्यमंत्री जन वन योजना' कब प्रारम्भ की गई?",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 44,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "1",
+                    "B": "2",
+                    "C": "4",
+                    "D": ""
+                  },
+                  "question": "I How many National Parks are there in Jharkhand ?"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "1",
+                    "B": "2",
+                    "C": "4",
+                    "D": ""
+                  },
+                  "question": "झारखण्ड में कितने राष्ट्रीय उद्यान हैं?",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 45,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "9",
+                    "B": "10",
+                    "C": "",
+                    "D": ""
+                  },
+                  "question": "How many sanctuary are there in Jharkhand ?"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "9",
+                    "B": "10",
+                    "C": "",
+                    "D": ""
+                  },
+                  "question": "झारखण्ड में कितने अभयारण्य हैं?",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 46,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "is discretionary",
+                    "B": "Mohalwari",
+                    "C": "is generally mandatory",
+                    "D": "Zamindari"
+                  },
+                  "question": "aeogrises which of the following tenure system ."
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "विवेकाधीन है",
+                    "B": "मोहलवारी",
+                    "C": "सामान्यतः अनिवार्य है",
+                    "D": "जमींदारी"
+                  },
+                  "question": "निम्नलिखित में से किस कार्यकाल प्रणाली को एओग्रीज़ करता है?",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "correct_answer": "",
+              "difficulty": "medium",
+              "id": 47,
+              "marks": 1,
+              "question_type": "multiple_choice",
+              "subject": "General Knowledge",
+              "translations": {
+                "en": {
+                  "explanation": "",
+                  "options": {
+                    "A": "State Legislature",
+                    "B": "Zamindari abolition movement",
+                    "C": "Permanent settlement of Bengal",
+                    "D": "Tribal revolt and land alienation"
+                  },
+                  "question": "Which authority plays the most decisive I role in enforcement of the Santal Parganas I Tenancy Act , 1949 ( A ) Gram Sabha I ( B ) Deputy Commissioner"
+                },
+                "hi": {
+                  "explanation": "",
+                  "options": {
+                    "A": "राज्य विधानमंडल",
+                    "B": "जमींदारी उन्मूलन आंदोलन",
+                    "C": "बंगाल का स्थायी बंदोबस्त",
+                    "D": "जनजातीय विद्रोह और भूमि अलगाव"
+                  },
+                  "question": "संताल परगना I किरायेदारी अधिनियम, 1949 को लागू करने में कौन सा प्राधिकारी सबसे निर्णायक I भूमिका निभाता है (A) ग्राम सभा I (B) उपायुक्त",
+                  "translated": true
+                }
+              },
+              "uploaded_at": "6/11/2026, 4:17:55 PM",
+              "uploaded_by": "testing"
+            },
+            {
+              "id": 48,
+              "question_type": "multiple_choice",
+              "translations": {
+                "en": {
+                  "question": "I Whereis Shaheed Nirmal mahto Stadium ?",
+                  "options": {
+                    "A": "Bokaro",
+                    "B": "Ramgarh",
+                    "C": "Dumka",
+                    "D": "Jamshedpur"
+                  },
+                  "explanation": "",
+                  "translated": false
+                },
+                "hi": {
+                  "question": "शहीद निर्मल महतो स्टेडियम कहां है?",
+                  "options": {
+                    "A": "बोकारो",
+                    "B": "रामगढ़",
+                    "C": "दुमका",
+                    "D": "जमशेदपुर"
+                  },
+                  "explanation": "",
+                  "translated": true
+                }
+              },
+              "correct_answer": "",
+              "difficulty": "medium",
+              "marks": 1,
+              "subject": "General Knowledge",
               "uploaded_by": "testing",
-              "uploaded_at": "6/11/2026, 2:16:51 AM"
+              "uploaded_at": "6/11/2026, 4:45:27 PM"
+            },
+            {
+              "id": 49,
+              "question_type": "multiple_choice",
+              "translations": {
+                "en": {
+                  "question": "The Valmiki Yojana is the Jharkhand Budget 2025 - 26, which provides a monthly stipend of",
+                  "options": {
+                    "A": "Rs . 2000",
+                    "B": "Rs . 3000",
+                    "C": "Rs . 4000",
+                    "D": "Rs . 5000"
+                  },
+                  "explanation": "",
+                  "translated": false
+                },
+                "hi": {
+                  "question": "वाल्मिकी योजना झारखंड बजट 2025 - 26 है, जो मासिक वजीफा प्रदान करती है",
+                  "options": {
+                    "A": "रु. 2000",
+                    "B": "रु. 3000",
+                    "C": "रु. 4000",
+                    "D": "रु. 5000"
+                  },
+                  "explanation": "",
+                  "translated": true
+                }
+              },
+              "correct_answer": "",
+              "difficulty": "medium",
+              "marks": 1,
+              "subject": "General Knowledge",
+              "uploaded_by": "testing",
+              "uploaded_at": "6/11/2026, 4:45:27 PM"
+            },
+            {
+              "id": 50,
+              "question_type": "multiple_choice",
+              "translations": {
+                "en": {
+                  "question": "i : Who is the author of the book ‘ Prem me 59 . 3 Ped hona ’ ?",
+                  "options": {
+                    "A": "JasmitaKerketta ¢",
+                    "B": "Nanda Panday . c",
+                    "C": "",
+                    "D": ""
+                  },
+                  "explanation": "",
+                  "translated": false
+                },
+                "hi": {
+                  "question": "i: 'प्रेम मी 59' पुस्तक के लेखक कौन हैं? 3 पेड होना' ?",
+                  "options": {
+                    "A": "जस्मिताकेरकेट्टा ¢",
+                    "B": "नंदा पांडे. सी",
+                    "C": "",
+                    "D": ""
+                  },
+                  "explanation": "",
+                  "translated": true
+                }
+              },
+              "correct_answer": "",
+              "difficulty": "medium",
+              "marks": 1,
+              "subject": "General Knowledge",
+              "uploaded_by": "testing",
+              "uploaded_at": "6/11/2026, 4:45:27 PM"
+            },
+            {
+              "id": 51,
+              "question_type": "multiple_choice",
+              "translations": {
+                "en": {
+                  "question": "Bhagwan Birsa Munda excellence Award 60 . 7 2024wasgivento . e : ( A ) Dr. Arpana Sharma a",
+                  "options": {
+                    "A": "Anil Jain ; B",
+                    "B": "Pushkar Mahto ( C",
+                    "C": "Kartik Sen i. : ( D",
+                    "D": ""
+                  },
+                  "explanation": "",
+                  "translated": false
+                },
+                "hi": {
+                  "question": "भगवान बिरसा मुंडा उत्कृष्टता पुरस्कार 60। 7 2024वसगिवेंटो। ई : ( ए ) डॉ. अर्पणा शर्मा ए",
+                  "options": {
+                    "A": "अनिल जैन ; बी",
+                    "B": "पुष्कर महतो (सी",
+                    "C": "कार्तिक सेन I : ( डी",
+                    "D": ""
+                  },
+                  "explanation": "",
+                  "translated": true
+                }
+              },
+              "correct_answer": "",
+              "difficulty": "medium",
+              "marks": 1,
+              "subject": "General Knowledge",
+              "uploaded_by": "testing",
+              "uploaded_at": "6/11/2026, 4:45:27 PM"
+            },
+            {
+              "id": 52,
+              "question_type": "multiple_choice",
+              "translations": {
+                "en": {
+                  "question": "The Jharkhand budget is primarily spent on",
+                  "options": {
+                    "A": "Energy",
+                    "B": "Pension",
+                    "C": "Social welfare",
+                    "D": "Education ;"
+                  },
+                  "explanation": "",
+                  "translated": false
+                },
+                "hi": {
+                  "question": "झारखंड का बजट मुख्य रूप से खर्च होता है",
+                  "options": {
+                    "A": "ऊर्जा",
+                    "B": "पेंशन",
+                    "C": "समाज कल्याण",
+                    "D": "शिक्षा ;"
+                  },
+                  "explanation": "",
+                  "translated": true
+                }
+              },
+              "correct_answer": "",
+              "difficulty": "medium",
+              "marks": 1,
+              "subject": "General Knowledge",
+              "uploaded_by": "testing",
+              "uploaded_at": "6/11/2026, 4:45:27 PM"
+            },
+            {
+              "id": 53,
+              "question_type": "multiple_choice",
+              "translations": {
+                "en": {
+                  "question": "Who became the first female DGP in Jharkhand ?",
+                  "options": {
+                    "A": "2022",
+                    "B": "Tadasha Mishra",
+                    "C": "Rishma Rameshan -",
+                    "D": "2025"
+                  },
+                  "explanation": "",
+                  "translated": false
+                },
+                "hi": {
+                  "question": "झारखंड में पहली महिला डीजीपी कौन बनी?",
+                  "options": {
+                    "A": "2022",
+                    "B": "तदाशा मिश्रा",
+                    "C": "रिशमा रमेशन -",
+                    "D": "2025"
+                  },
+                  "explanation": "",
+                  "translated": true
+                }
+              },
+              "correct_answer": "",
+              "difficulty": "medium",
+              "marks": 1,
+              "subject": "General Knowledge",
+              "uploaded_by": "testing",
+              "uploaded_at": "6/11/2026, 4:45:27 PM"
+            },
+            {
+              "id": 54,
+              "question_type": "multiple_choice",
+              "translations": {
+                "en": {
+                  "question": "Palash Brand is for empowering whom ?",
+                  "options": {
+                    "A": "Deepak Mandal",
+                    "B": "Salima Tete",
+                    "C": "Michael Kindo",
+                    "D": "Girlchild"
+                  },
+                  "explanation": "",
+                  "translated": false
+                },
+                "hi": {
+                  "question": "पलाश ब्रांड किसे सशक्त बनाने के लिए है?",
+                  "options": {
+                    "A": "दीपक मंडल",
+                    "B": "सलीमा टेटे",
+                    "C": "माइकल किंडो",
+                    "D": "बालिका"
+                  },
+                  "explanation": "",
+                  "translated": true
+                }
+              },
+              "correct_answer": "",
+              "difficulty": "medium",
+              "marks": 1,
+              "subject": "General Knowledge",
+              "uploaded_by": "testing",
+              "uploaded_at": "6/11/2026, 4:45:27 PM"
+            },
+            {
+              "id": 55,
+              "question_type": "multiple_choice",
+              "translations": {
+                "en": {
+                  "question": "When was the Tejaswini Yojana approved by the World Bank ?",
+                  "options": {
+                    "A": "21 June , 2016",
+                    "B": "20May , 2015",
+                    "C": "16April , 2017",
+                    "D": "21 September , 2018"
+                  },
+                  "explanation": "",
+                  "translated": false
+                },
+                "hi": {
+                  "question": "विश्व बैंक द्वारा तेजस्विनी योजना को कब मंजूरी दी गई थी?",
+                  "options": {
+                    "A": "21 जून 2016",
+                    "B": "20 मई, 2015",
+                    "C": "16अप्रैल, 2017",
+                    "D": "21 सितंबर 2018"
+                  },
+                  "explanation": "",
+                  "translated": true
+                }
+              },
+              "correct_answer": "",
+              "difficulty": "medium",
+              "marks": 1,
+              "subject": "General Knowledge",
+              "uploaded_by": "testing",
+              "uploaded_at": "6/11/2026, 4:45:27 PM"
+            },
+            {
+              "id": 56,
+              "question_type": "multiple_choice",
+              "translations": {
+                "en": {
+                  "question": "Whatis the Objective of ARYA Yojana ?",
+                  "options": {
+                    "A": "Tana Bhagat",
+                    "B": "Chero",
+                    "C": "Hill Knariya",
+                    "D": "Kherwar"
+                  },
+                  "explanation": "",
+                  "translated": false
+                },
+                "hi": {
+                  "question": "आर्य योजना का उद्देश्य क्या है?",
+                  "options": {
+                    "A": "टाना भगत",
+                    "B": "चेरो",
+                    "C": "पहाड़ी नरिया",
+                    "D": "खेरवार"
+                  },
+                  "explanation": "",
+                  "translated": true
+                }
+              },
+              "correct_answer": "",
+              "difficulty": "medium",
+              "marks": 1,
+              "subject": "General Knowledge",
+              "uploaded_by": "testing",
+              "uploaded_at": "6/11/2026, 4:45:27 PM"
+            },
+            {
+              "id": 57,
+              "question_type": "multiple_choice",
+              "translations": {
+                "en": {
+                  "question": "Beniram Mahatha , a celebrated personality I was mainly related to which field ? I ( A ) National movements",
+                  "options": {
+                    "A": "Literature .",
+                    "B": "Dance",
+                    "C": "",
+                    "D": ""
+                  },
+                  "explanation": "",
+                  "translated": false
+                },
+                "hi": {
+                  "question": "बेनीराम महथा, एक प्रसिद्ध व्यक्तित्व मैं मुख्यतः किस क्षेत्र से सम्बंधित था? मैं (ए) राष्ट्रीय आंदोलन",
+                  "options": {
+                    "A": "साहित्य ।",
+                    "B": "नृत्य",
+                    "C": "",
+                    "D": ""
+                  },
+                  "explanation": "",
+                  "translated": true
+                }
+              },
+              "correct_answer": "",
+              "difficulty": "medium",
+              "marks": 1,
+              "subject": "General Knowledge",
+              "uploaded_by": "testing",
+              "uploaded_at": "6/11/2026, 4:45:27 PM"
+            },
+            {
+              "id": 58,
+              "question_type": "multiple_choice",
+              "translations": {
+                "en": {
+                  "question": "Vachaspati Tripathi was arrested during - which movements ?",
+                  "options": {
+                    "A": "Five oa",
+                    "B": "Three : ( C )",
+                    "C": "Seven ( D )",
+                    "D": "Six ( B )"
+                  },
+                  "explanation": "",
+                  "translated": false
+                },
+                "hi": {
+                  "question": "वाचस्पति त्रिपाठी को किस आंदोलन के दौरान गिरफ्तार किया गया था?",
+                  "options": {
+                    "A": "पांच ओए",
+                    "B": "तीन : (सी)",
+                    "C": "सात (डी)",
+                    "D": "छह (बी)"
+                  },
+                  "explanation": "",
+                  "translated": true
+                }
+              },
+              "correct_answer": "",
+              "difficulty": "medium",
+              "marks": 1,
+              "subject": "General Knowledge",
+              "uploaded_by": "testing",
+              "uploaded_at": "6/11/2026, 4:45:27 PM"
+            },
+            {
+              "id": 59,
+              "question_type": "multiple_choice",
+              "translations": {
+                "en": {
+                  "question": "I Which among the following Jharkhand 78 . feta Brahmans did not perform the Jobs of Purohitas ? aH",
+                  "options": {
+                    "A": "Panchet Raj",
+                    "B": "Korambe Raj",
+                    "C": "Phani Mukut Rai S64",
+                    "D": "Ramgarh Raj . ( D ) I"
+                  },
+                  "explanation": "",
+                  "translated": false
+                },
+                "hi": {
+                  "question": "निम्नलिखित में से कौनसा झारखण्ड 78 . क्या ब्राह्मणों ने पुरोहितों का कार्य नहीं किया? एएच",
+                  "options": {
+                    "A": "पंचेत राज",
+                    "B": "कोराम्बे राज",
+                    "C": "फणी मुकुट राय एस64",
+                    "D": "रामगढ राज. (डी) मैं"
+                  },
+                  "explanation": "",
+                  "translated": true
+                }
+              },
+              "correct_answer": "",
+              "difficulty": "medium",
+              "marks": 1,
+              "subject": "General Knowledge",
+              "uploaded_by": "testing",
+              "uploaded_at": "6/11/2026, 4:45:27 PM"
+            },
+            {
+              "id": 60,
+              "question_type": "multiple_choice",
+              "translations": {
+                "en": {
+                  "question": "' Manjhi Sthan ' , ‘ the place of Panchayat 80 . ‘ arefie mainly related to which tribal community ? Was",
+                  "options": {
+                    "A": "Santal Ca",
+                    "B": "Ho ( B )",
+                    "C": "Oraon ( C )",
+                    "D": "Munda ( D )"
+                  },
+                  "explanation": "",
+                  "translated": false
+                },
+                "hi": {
+                  "question": "'मांझी स्थान', 'पंचायत का स्थान' 80। 'अरेफ़ी मुख्यतः किस आदिवासी समुदाय से संबंधित है? था",
+                  "options": {
+                    "A": "संथाल सी.ए",
+                    "B": "हो (बी)",
+                    "C": "उराँव (सी)",
+                    "D": "मुंडा (डी)"
+                  },
+                  "explanation": "",
+                  "translated": true
+                }
+              },
+              "correct_answer": "",
+              "difficulty": "medium",
+              "marks": 1,
+              "subject": "General Knowledge",
+              "uploaded_by": "testing",
+              "uploaded_at": "6/11/2026, 4:45:27 PM"
+            },
+            {
+              "id": 61,
+              "question_type": "multiple_choice",
+              "translations": {
+                "en": {
+                  "question": "I The Dhokolo Sohor administrative system 81 . is mainly related to which of the following tribes ?",
+                  "options": {
+                    "A": "Khewar \"",
+                    "B": "Ho I",
+                    "C": "Khariya “",
+                    "D": "Santal ;"
+                  },
+                  "explanation": "",
+                  "translated": false
+                },
+                "hi": {
+                  "question": "I ढोकोलो सोहोर प्रशासनिक व्यवस्था 81 . मुख्य रूप से निम्नलिखित में से किस जनजाति से संबंधित है?",
+                  "options": {
+                    "A": "खेवर\"",
+                    "B": "हो मैं",
+                    "C": "खरिया “",
+                    "D": "संथाल ;"
+                  },
+                  "explanation": "",
+                  "translated": true
+                }
+              },
+              "correct_answer": "",
+              "difficulty": "medium",
+              "marks": 1,
+              "subject": "General Knowledge",
+              "uploaded_by": "testing",
+              "uploaded_at": "6/11/2026, 4:45:27 PM"
+            },
+            {
+              "id": 62,
+              "question_type": "multiple_choice",
+              "translations": {
+                "en": {
+                  "question": "I Who among the following was political 82 . 0 . head of Paraha ?",
+                  "options": {
+                    "A": "Mahato . S",
+                    "B": "Manjhi (",
+                    "C": "",
+                    "D": ""
+                  },
+                  "explanation": "",
+                  "translated": false
+                },
+                "hi": {
+                  "question": "I निम्नलिखित में से कौन राजनीतिक था 82. 0 . परहा का मुखिया?",
+                  "options": {
+                    "A": "महतो . एस",
+                    "B": "मांझी (",
+                    "C": "",
+                    "D": ""
+                  },
+                  "explanation": "",
+                  "translated": true
+                }
+              },
+              "correct_answer": "",
+              "difficulty": "medium",
+              "marks": 1,
+              "subject": "General Knowledge",
+              "uploaded_by": "testing",
+              "uploaded_at": "6/11/2026, 4:45:27 PM"
+            },
+            {
+              "id": 63,
+              "question_type": "multiple_choice",
+              "translations": {
+                "en": {
+                  "question": "The Mod Manjhi was Panchayat of how 83 . 7 many Manjhis ?",
+                  "options": {
+                    "A": "Three I",
+                    "B": "Five A",
+                    "C": "Six (",
+                    "D": "Seven ("
+                  },
+                  "explanation": "",
+                  "translated": false
+                },
+                "hi": {
+                  "question": "मोद मांझी कैसे 83 की पंचायत थी। 7 कई मांझी?",
+                  "options": {
+                    "A": "तीन मैं",
+                    "B": "पांच ए",
+                    "C": "छह (",
+                    "D": "सात ("
+                  },
+                  "explanation": "",
+                  "translated": true
+                }
+              },
+              "correct_answer": "",
+              "difficulty": "medium",
+              "marks": 1,
+              "subject": "General Knowledge",
+              "uploaded_by": "testing",
+              "uploaded_at": "6/11/2026, 4:45:27 PM"
+            },
+            {
+              "id": 64,
+              "question_type": "multiple_choice",
+              "translations": {
+                "en": {
+                  "question": "In the Paraha system , which of the 84 . 7 following called meetings ( Baithak ) of the ; Panchayat ? I ( A ) Pande I (",
+                  "options": {
+                    "A": "Lal I (",
+                    "B": "Ohadar . (",
+                    "C": "",
+                    "D": ""
+                  },
+                  "explanation": "",
+                  "translated": false
+                },
+                "hi": {
+                  "question": "परहा प्रणाली में 84 में से कौन सा. 7 की निम्नलिखित बैठकें (बैठक) बुलाई गईं; पंचायत ? मैं (ए) पांडे मैं (",
+                  "options": {
+                    "A": "लाल मैं (",
+                    "B": "ओहदार. (",
+                    "C": "",
+                    "D": ""
+                  },
+                  "explanation": "",
+                  "translated": true
+                }
+              },
+              "correct_answer": "",
+              "difficulty": "medium",
+              "marks": 1,
+              "subject": "General Knowledge",
+              "uploaded_by": "testing",
+              "uploaded_at": "6/11/2026, 4:45:27 PM"
+            },
+            {
+              "id": 65,
+              "question_type": "multiple_choice",
+              "translations": {
+                "en": {
+                  "question": "Onthe instruction of Munda an ae ? following spread information in the",
+                  "options": {
+                    "A": "Diwan",
+                    "B": "Kotawar I",
+                    "C": "Lal",
+                    "D": "Pan Khawas"
+                  },
+                  "explanation": "",
+                  "translated": false
+                },
+                "hi": {
+                  "question": "मुंडा के निर्देश पर एई? निम्नलिखित में सूचना फैल गई",
+                  "options": {
+                    "A": "दीवान",
+                    "B": "कोटवार प्रथम",
+                    "C": "लाल",
+                    "D": "पान खवास"
+                  },
+                  "explanation": "",
+                  "translated": true
+                }
+              },
+              "correct_answer": "",
+              "difficulty": "medium",
+              "marks": 1,
+              "subject": "General Knowledge",
+              "uploaded_by": "testing",
+              "uploaded_at": "6/11/2026, 4:45:27 PM"
+            },
+            {
+              "id": 66,
+              "question_type": "multiple_choice",
+              "translations": {
+                "en": {
+                  "question": "Which Royal dynasty introduced the term ‘ Bhuinhar ' for the traditional community headman ?",
+                  "options": {
+                    "A": "Kherwar",
+                    "B": "Singh 7",
+                    "C": "Nag",
+                    "D": ""
+                  },
+                  "explanation": "",
+                  "translated": false
+                },
+                "hi": {
+                  "question": "किस शाही राजवंश ने पारंपरिक समुदाय के मुखिया के लिए 'भुइंहार' शब्द की शुरुआत की?",
+                  "options": {
+                    "A": "खेरवार",
+                    "B": "सिंह 7",
+                    "C": "गुनगुन",
+                    "D": ""
+                  },
+                  "explanation": "",
+                  "translated": true
+                }
+              },
+              "correct_answer": "",
+              "difficulty": "medium",
+              "marks": 1,
+              "subject": "General Knowledge",
+              "uploaded_by": "testing",
+              "uploaded_at": "6/11/2026, 4:45:27 PM"
+            },
+            {
+              "id": 67,
+              "question_type": "multiple_choice",
+              "translations": {
+                "en": {
+                  "question": "Whois author of story ' Puna Khor ’ ? .(A ) Ahlad Tirkey",
+                  "options": {
+                    "A": "Indrajeet Oraon :",
+                    "B": "Narayan Bhagat",
+                    "C": "Dabale Kujur",
+                    "D": "( C ) Lohra Oraon- ae"
+                  },
+                  "explanation": "",
+                  "translated": false
+                },
+                "hi": {
+                  "question": "'पुना खोर' कहानी के लेखक कौन हैं? .(ए )अह्लाद तिर्की",
+                  "options": {
+                    "A": "इंद्रजीत उराँव :",
+                    "B": "नारायण भगत",
+                    "C": "दबले कुजूर",
+                    "D": "( सी ) लोहरा उराँव - ए.ई"
+                  },
+                  "explanation": "",
+                  "translated": true
+                }
+              },
+              "correct_answer": "",
+              "difficulty": "medium",
+              "marks": 1,
+              "subject": "General Knowledge",
+              "uploaded_by": "testing",
+              "uploaded_at": "6/11/2026, 4:45:27 PM"
+            },
+            {
+              "id": 68,
+              "question_type": "multiple_choice",
+              "translations": {
+                "en": {
+                  "question": "I Whois author of ' Nagpuri Fag Shatak ' ?",
+                  "options": {
+                    "A": "Seven",
+                    "B": "Nine",
+                    "C": "Four I",
+                    "D": "Five"
+                  },
+                  "explanation": "",
+                  "translated": false
+                },
+                "hi": {
+                  "question": "मैं 'नागपुरी फाग शतक' का लेखक कौन हूं?",
+                  "options": {
+                    "A": "सात",
+                    "B": "नौ",
+                    "C": "चार मैं",
+                    "D": "पाँच"
+                  },
+                  "explanation": "",
+                  "translated": true
+                }
+              },
+              "correct_answer": "",
+              "difficulty": "medium",
+              "marks": 1,
+              "subject": "General Knowledge",
+              "uploaded_by": "testing",
+              "uploaded_at": "6/11/2026, 4:45:27 PM"
+            },
+            {
+              "id": 69,
+              "question_type": "multiple_choice",
+              "translations": {
+                "en": {
+                  "question": "The conical hutment called ' Kumba ' was used by which of the following tribal communities ?",
+                  "options": {
+                    "A": "Munda",
+                    "B": "Oraon",
+                    "C": "Bedia",
+                    "D": "Birhor . I"
+                  },
+                  "explanation": "",
+                  "translated": false
+                },
+                "hi": {
+                  "question": "'कुम्बा' नामक शंक्वाकार झोपड़ी का उपयोग निम्नलिखित में से किस आदिवासी समुदाय द्वारा किया जाता था?",
+                  "options": {
+                    "A": "मुंडा",
+                    "B": "ओरांव",
+                    "C": "बेदिया",
+                    "D": "बिरहोर . मैं"
+                  },
+                  "explanation": "",
+                  "translated": true
+                }
+              },
+              "correct_answer": "",
+              "difficulty": "medium",
+              "marks": 1,
+              "subject": "General Knowledge",
+              "uploaded_by": "testing",
+              "uploaded_at": "6/11/2026, 4:45:27 PM"
+            },
+            {
+              "id": 70,
+              "question_type": "multiple_choice",
+              "translations": {
+                "en": {
+                  "question": "The Chutia Ram Temple was built in which year",
+                  "options": {
+                    "A": "1605",
+                    "B": "— 1670 .",
+                    "C": "1685",
+                    "D": "1700"
+                  },
+                  "explanation": "",
+                  "translated": false
+                },
+                "hi": {
+                  "question": "चुटिया राम मंदिर किस वर्ष बनाया गया था?",
+                  "options": {
+                    "A": "1605",
+                    "B": "— 1670 .",
+                    "C": "1685",
+                    "D": "1700"
+                  },
+                  "explanation": "",
+                  "translated": true
+                }
+              },
+              "correct_answer": "",
+              "difficulty": "medium",
+              "marks": 1,
+              "subject": "General Knowledge",
+              "uploaded_by": "testing",
+              "uploaded_at": "6/11/2026, 4:45:27 PM"
+            },
+            {
+              "id": 71,
+              "question_type": "multiple_choice",
+              "translations": {
+                "en": {
+                  "question": "— Which of the following is ' Ramkathi ' ?",
+                  "options": {
+                    "A": "Folk Tale",
+                    "B": "Musical instrument",
+                    "C": "A famous fair",
+                    "D": "Aholy place I ."
+                  },
+                  "explanation": "",
+                  "translated": false
+                },
+                "hi": {
+                  "question": "— निम्नलिखित में से कौन सी 'रामकथा' है?",
+                  "options": {
+                    "A": "लोक कथा",
+                    "B": "संगीत के उपकरण",
+                    "C": "एक प्रसिद्ध मेला",
+                    "D": "अपवित्र स्थान I"
+                  },
+                  "explanation": "",
+                  "translated": true
+                }
+              },
+              "correct_answer": "",
+              "difficulty": "medium",
+              "marks": 1,
+              "subject": "General Knowledge",
+              "uploaded_by": "testing",
+              "uploaded_at": "6/11/2026, 4:45:27 PM"
+            },
+            {
+              "id": 72,
+              "question_type": "multiple_choice",
+              "translations": {
+                "en": {
+                  "question": "Which of the following dances is performed on the day after Diwali ?",
+                  "options": {
+                    "A": "Domkach",
+                    "B": "Sohrai I",
+                    "C": "Baundi",
+                    "D": ""
+                  },
+                  "explanation": "",
+                  "translated": false
+                },
+                "hi": {
+                  "question": "निम्नलिखित में से कौन सा नृत्य दिवाली के अगले दिन किया जाता है?",
+                  "options": {
+                    "A": "डोमकच",
+                    "B": "सोहराई I",
+                    "C": "बौंडी",
+                    "D": ""
+                  },
+                  "explanation": "",
+                  "translated": true
+                }
+              },
+              "correct_answer": "",
+              "difficulty": "medium",
+              "marks": 1,
+              "subject": "General Knowledge",
+              "uploaded_by": "testing",
+              "uploaded_at": "6/11/2026, 4:45:27 PM"
             }
           ],
-          "id": 1,
-          "created_by": "testing",
-          "created_at": "2026-06-11 02:16:51",
-          "updated_by": "testing",
-          "updated_at": "2026-06-11 02:16:51",
-          "edit_history": [
-            {
-              "action": "created",
-              "by": "testing",
-              "at": "2026-06-11 02:16:51"
-            }
-          ]
+          "skill_id": 1,
+          "type": "practice",
+          "updated_at": "2026-06-11 16:45:27",
+          "updated_by": "testing"
         }
       ],
       "created_by": "testing",
       "created_by_id": 1,
       "created_at": "2026-06-11 01:46:56",
       "updated_by": "testing",
-      "updated_at": "2026-06-11 02:16:51"
+      "updated_at": "2026-06-11 16:45:27"
     }
   ]
 }

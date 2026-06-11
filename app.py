@@ -1,3 +1,4 @@
+from curses import echo
 import os
 import json
 import re
@@ -7,20 +8,54 @@ import webbrowser
 import threading
 from datetime import datetime
 from PIL import Image, ImageFilter, ImageEnhance
-from flask import Flask, request, jsonify, send_file, session
+from flask import Flask, request, jsonify, send_file, session, render_template
 from werkzeug.security import generate_password_hash, check_password_hash
 import spacy
 from langdetect import detect, LangDetectException
 from deep_translator import GoogleTranslator
+from pdf2image import convert_from_path
 import PyPDF2
 import docx
+
+from PIL import Image
+import numpy as np
 
 nlp_en = spacy.load("en_core_web_sm")
 app = Flask(__name__)
 app.secret_key = "mcqportal_secret_key_2025"
 
+
 if platform.system() == "Windows":
     pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+elif platform.system() == "Darwin":
+    pytesseract.pytesseract.tesseract_cmd = "/opt/homebrew/bin/tesseract"
+
+print("Tesseract:", pytesseract.pytesseract.tesseract_cmd)
+
+try:
+    print("Available Languages:", pytesseract.get_languages())
+except Exception as e:
+    print("Language Load Error:", e)
+
+# Do NOT set TESSDATA_PREFIX on macOS Homebrew
+
+
+def find_separator(image_path):
+    img = Image.open(image_path).convert("L")
+
+    arr = np.array(img)
+
+    # Dark pixel score per column
+    score = np.sum(255 - arr, axis=0)
+
+    width = arr.shape[1]
+
+    start = int(width * 0.35)
+    end = int(width * 0.65)
+
+    separator = start + np.argmax(score[start:end])
+
+    return separator
 
 DATA_FILE = "course_data.json"
 
@@ -77,8 +112,13 @@ def preprocess_image(img):
 def split_image(filepath):
     img = Image.open(filepath)
     width, height = img.size
-    left  = img.crop((0, 0, width // 2, height))
-    right = img.crop((int(width * 0.47), 0, width, height))
+    #left  = img.crop((0, 0, width // 2, height))
+    #right = img.crop((int(width * 0.47), 0, width, height))
+
+    separator_x = find_separator(filepath)
+    left = img.crop((0, 0, separator_x - 10, height))
+    right = img.crop((separator_x + 10, 0, width, height))
+
     os.makedirs("uploads", exist_ok=True)
     left_path  = "uploads/left_en.png"
     right_path = "uploads/right_hi.png"
@@ -87,9 +127,52 @@ def split_image(filepath):
     return left_path, right_path
 
 def extract_text_from_image(filepath, lang):
-    img = Image.open(filepath)
-    config = "--oem 3 --psm 4"
-    return pytesseract.image_to_string(img, lang=lang, config=config)
+    try:
+        img = Image.open(filepath)
+
+        custom_config = r'--oem 3 --psm 6'
+
+        text = pytesseract.image_to_string(
+            img,
+            lang=lang,
+            config=custom_config
+        )
+
+        return text
+
+    except Exception as e:
+        print(f"OCR Error ({lang}): {e}")
+        return ""
+def extract_text_from_pdf_images(filepath):
+
+    pages = convert_from_path(
+        filepath,
+        dpi=300
+    )
+
+    en_text = ""
+    hi_text = ""
+
+    os.makedirs("uploads/pdf_pages", exist_ok=True)
+
+    for i, page in enumerate(pages):
+
+        page_path = f"uploads/pdf_pages/page_{i}.png"
+        page.save(page_path, "PNG")
+
+        left_path, right_path = split_image(page_path)
+
+        en_text += "\n" + extract_text_from_image(
+            left_path,
+            "eng"
+        )
+
+        hi_text += "\n" + extract_text_from_image(
+            right_path,
+            "hin"
+        )
+
+    return en_text, hi_text
 
 def extract_text_from_pdf(filepath):
     text = ""
@@ -121,8 +204,16 @@ def extract_text_from_file(filepath, filename):
         return en_text, hi_text
 
     elif ext == "pdf":
+
+        try:
+            return extract_text_from_pdf_images(filepath)
+        except Exception as e:
+            print("PDF OCR fallback:", e) 
+
         text = extract_text_from_pdf(filepath)
-        return text, ""   
+
+        return text, ""
+      
     elif ext in ["doc", "docx"]:
         text = extract_text_from_docx(filepath)
         return text, ""   
@@ -241,7 +332,8 @@ def pair_and_translate(en_list, hi_list):
 
 @app.route("/")
 def index():
-    return send_file(os.path.join(os.path.dirname(__file__), "frontend.html"))
+    #return send_file(os.path.join(os.path.dirname(__file__), "frontend.html"))
+    return render_template("frontend.html")
 
 @app.route("/api/register", methods=["POST"])
 def register():
@@ -260,7 +352,7 @@ def register():
     user = {
         "id":         len(data["users"]) + 1,
         "username":   username,
-        "password":   generate_password_hash(password),
+        "password":   generate_password_hash(password, method='pbkdf2:sha256'),
         "name":       name,
         "role":       "teacher",
         "created_at": now()
@@ -546,7 +638,7 @@ def upload():
             file.save(filepath)
 
             en_text, hi_text = extract_text_from_file(filepath, file.filename)
-
+           
             en_qs = parse_questions(en_text, language="en")
             hi_qs = parse_questions(hi_text, language="hi") if hi_text else []
 
@@ -676,6 +768,6 @@ def submit():
     })
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 3000))
     threading.Timer(1.5, lambda: webbrowser.open(f"http://localhost:{port}")).start()
     app.run(host="0.0.0.0", port=port, debug=True)
