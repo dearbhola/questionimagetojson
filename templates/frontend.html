@@ -10,6 +10,9 @@
 </head>
 <body>
 
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     LOGIN PAGE
+════════════════════════════════════════════════════════════════════════════ -->
 <div id="page-login" class="login-wrap">
   <div class="login-card">
     <div class="login-logo">
@@ -18,6 +21,8 @@
       <p class="text-muted small">Sign in to continue</p>
     </div>
     <div id="login-alert"></div>
+
+    <!-- Sign In Form -->
     <div id="login-form">
       <div class="mb-3">
         <label class="form-label fw-semibold small">Username</label>
@@ -35,6 +40,8 @@
         <a class="small fw-semibold" style="color:#7c3aed;cursor:pointer;" onclick="showRegister()">Register</a>
       </div>
     </div>
+
+    <!-- Register Form — Feature 10: role selector -->
     <div id="register-form" style="display:none;">
       <div class="mb-3">
         <label class="form-label fw-semibold small">Full Name</label>
@@ -48,6 +55,14 @@
         <label class="form-label fw-semibold small">Password</label>
         <input type="password" class="form-control" id="reg-password" placeholder="Choose a password">
       </div>
+      <!-- Feature 10: Student / Teacher role -->
+      <div class="mb-3">
+        <label class="form-label fw-semibold small">Register as</label>
+        <select class="form-select" id="reg-role">
+          <option value="teacher">Teacher (create courses & quizzes)</option>
+          <option value="student">Student (attempt quizzes)</option>
+        </select>
+      </div>
       <button class="btn w-100 text-white mb-3" style="background:#7c3aed;" onclick="doRegister()">
         <i class="bi bi-person-plus me-2"></i>Register
       </button>
@@ -58,42 +73,56 @@
   </div>
 </div>
 
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     MAIN APP
+════════════════════════════════════════════════════════════════════════════ -->
 <div id="page-app" style="display:none;">
 
+<!-- TOP NAV -->
 <nav class="topnav">
   <button class="mobile-menu-btn" onclick="toggleSidebar()">
     <i class="bi bi-list"></i>
-</button>
-
-<div class="brand">
-    <span>LMS</span> MCQ Portal
-</div>
+  </button>
+  <div class="brand"><span>LMS</span> MCQ Portal</div>
   <div class="ms-auto d-flex align-items-center gap-3">
-    <span class="text-white-50 small d-none d-md-inline">Learner's Menu</span>
     <span class="text-white-50 small d-none d-md-inline">Courses</span>
     <span class="text-white-50 small d-none d-md-inline">Reports</span>
     <div class="d-flex align-items-center gap-2">
+      <!-- Feature 1: timer display lives here -->
+      <span class="quiz-timer" id="quiz-timer-display" style="display:none;"></span>
       <span class="badge bg-success rounded-pill" id="nav-user-name"></span>
-      <button class="btn btn-sm btn-outline-light" onclick="doLogout()"><i class="bi bi-box-arrow-right"></i></button>
+      <button class="btn btn-sm btn-outline-light" onclick="doLogout()">
+        <i class="bi bi-box-arrow-right"></i>
+      </button>
     </div>
   </div>
 </nav>
 
+<!-- SIDEBAR -->
 <div class="sidebar">
   <ul class="nav flex-column" id="sidebar-nav">
     <li><a class="nav-link active" id="sb-courses" onclick="showSection('courses')"><i class="bi bi-grid me-2"></i>All Courses</a></li>
     <li><a class="nav-link" id="sb-course-detail" onclick="showSection('course-detail')" style="display:none"><i class="bi bi-clipboard-data me-2"></i>Course Detail</a></li>
-    <li><a class="nav-link" id="sb-skills" onclick="showSection('skills')" style="display:none"><i class="bi bi-star me-2"></i>Skills</a></li>
+    <li><a class="nav-link" id="sb-skills"  onclick="showSection('skills')"  style="display:none"><i class="bi bi-star me-2"></i>Skills</a></li>
     <li><a class="nav-link" id="sb-lessons" onclick="showSection('lessons')" style="display:none"><i class="bi bi-book me-2"></i>Lessons</a></li>
-    <li><a class="nav-link" id="sb-qsets" onclick="showSection('qsets')" style="display:none"><i class="bi bi-folder2-open me-2"></i>Question Sets</a></li>
+    <li><a class="nav-link" id="sb-qsets"   onclick="showSection('qsets')"   style="display:none"><i class="bi bi-folder2-open me-2"></i>Question Sets</a></li>
+    <!-- Feature 5: Search -->
+    <li><a class="nav-link" id="sb-search" onclick="showSection('search')"><i class="bi bi-search me-2"></i>Search Questions</a></li>
+    <!-- Feature 4: History -->
+    <li><a class="nav-link" id="sb-history" onclick="showSection('history')"><i class="bi bi-clock-history me-2"></i>Attempt History</a></li>
+    <!-- Feature 9: Analytics -->
+    <li><a class="nav-link" id="sb-analytics" onclick="showSection('analytics')"><i class="bi bi-bar-chart-line me-2"></i>Analytics</a></li>
     <li class="mt-3 border-top border-secondary pt-3">
       <a class="nav-link" id="sb-new-course" onclick="showSection('new-course')"><i class="bi bi-plus-circle me-2"></i>New Course</a>
     </li>
   </ul>
 </div>
 
+<!-- MAIN CONTENT -->
 <div class="main-content">
 
+  <!-- Breadcrumb bar -->
   <div class="card mb-3 p-3 d-flex flex-row justify-content-between align-items-center">
     <div>
       <h5 class="mb-0 fw-semibold text-dark" id="page-title">All Courses</h5>
@@ -102,23 +131,23 @@
     <span id="course-tag" class="badge fw-semibold" style="background:#7c3aed;font-size:0.82rem;padding:5px 12px;border-radius:99px;display:none;"></span>
   </div>
 
+  <!-- ─── SECTION: All Courses ────────────────────────────────────────────── -->
   <div class="section active" id="sec-courses">
     <div class="d-flex justify-content-between align-items-center mb-3">
       <h6 class="fw-semibold mb-0">All Courses</h6>
       <button class="btn btn-sm text-white" style="background:#7c3aed;" onclick="showSection('new-course')">
-        <i class="bi bi-plus-lg me-1"></i> New Course
+        <i class="bi bi-plus-lg me-1"></i>New Course
       </button>
     </div>
-    <div id="courses-list"><p class="text-muted">No courses yet. Create one!</p></div>
+    <div id="courses-list"><p class="text-muted">No courses yet.</p></div>
   </div>
 
+  <!-- ─── SECTION: New Course ─────────────────────────────────────────────── -->
   <div class="section" id="sec-new-course">
     <div class="card">
-      <div class="card-header-purple">
-        <span><i class="bi bi-clipboard-data me-2"></i>Create New Course</span>
-      </div>
+      <div class="card-header-purple"><span><i class="bi bi-clipboard-data me-2"></i>Create New Course</span></div>
       <div class="card-body p-4">
-        <p class="text-end text-danger small mb-3">● Indicates Required Fields</p>
+        <p class="text-end text-danger small mb-3">● Required Fields</p>
         <div class="row g-3">
           <div class="col-md-6"><label class="form-label fw-semibold small">Course Name <span class="req">●</span></label><input type="text" class="form-control" id="nc-name" placeholder="e.g. General Knowledge 2025"></div>
           <div class="col-md-6"><label class="form-label fw-semibold small">Course Code</label><input type="text" class="form-control" id="nc-code" placeholder="e.g. GK-2025"></div>
@@ -132,7 +161,7 @@
             </select>
           </div>
           <div class="col-md-4"><label class="form-label fw-semibold small">Marks per Question</label><input type="number" class="form-control" id="nc-marks" value="1" min="1"></div>
-          <div class="col-12"><label class="form-label fw-semibold small">Description</label><textarea class="form-control" id="nc-desc" rows="2" placeholder="Optional..."></textarea></div>
+          <div class="col-12"><label class="form-label fw-semibold small">Description</label><textarea class="form-control" id="nc-desc" rows="2" placeholder="Optional…"></textarea></div>
         </div>
       </div>
       <div class="card-footer bg-white d-flex justify-content-end gap-2 p-3">
@@ -142,6 +171,7 @@
     </div>
   </div>
 
+  <!-- ─── SECTION: Course Detail ──────────────────────────────────────────── -->
   <div class="section" id="sec-course-detail">
     <div class="row g-3 mb-3">
       <div class="col-md-3"><div class="stat-card"><div class="stat-num" id="cd-skills-count">0</div><div class="text-muted small">Skills</div></div></div>
@@ -165,6 +195,7 @@
     </div>
   </div>
 
+  <!-- ─── SECTION: Skills ─────────────────────────────────────────────────── -->
   <div class="section" id="sec-skills">
     <div class="card mb-3">
       <div class="card-header-purple"><span><i class="bi bi-star me-2"></i>Add Skill</span></div>
@@ -185,6 +216,7 @@
     </div>
   </div>
 
+  <!-- ─── SECTION: Lessons ────────────────────────────────────────────────── -->
   <div class="section" id="sec-lessons">
     <div class="card mb-3">
       <div class="card-header-purple"><span><i class="bi bi-book me-2"></i>Add Lesson</span></div>
@@ -192,7 +224,7 @@
         <div class="row g-3">
           <div class="col-md-2"><label class="form-label fw-semibold small">Sl. No <span class="req">●</span></label><input type="number" class="form-control" id="lesson-slno" value="1" min="1"></div>
           <div class="col-md-4"><label class="form-label fw-semibold small">Lesson Name <span class="req">●</span></label><input type="text" class="form-control" id="lesson-name" placeholder="e.g. Lesson 1"></div>
-          <div class="col-md-6"><label class="form-label fw-semibold small">Summary <span class="req">●</span></label><input type="text" class="form-control" id="lesson-summary" placeholder="Brief summary..."></div>
+          <div class="col-md-6"><label class="form-label fw-semibold small">Summary <span class="req">●</span></label><input type="text" class="form-control" id="lesson-summary" placeholder="Brief summary…"></div>
         </div>
       </div>
       <div class="card-footer bg-white d-flex justify-content-end gap-2 p-3">
@@ -206,6 +238,7 @@
     </div>
   </div>
 
+  <!-- ─── SECTION: Question Sets Wizard ──────────────────────────────────── -->
   <div class="section" id="sec-qsets">
     <div class="step-wizard d-flex align-items-center gap-1 flex-wrap mb-3">
       <div class="step-item active" id="stp-1">1 Set Details</div>
@@ -217,6 +250,7 @@
       <div class="step-item" id="stp-4">4 Saved</div>
     </div>
 
+    <!-- Step 1 -->
     <div id="qs-step-1">
       <div class="card">
         <div class="card-header-purple"><span><i class="bi bi-folder2-open me-2"></i>Question Set Details</span></div>
@@ -255,18 +289,19 @@
       </div>
     </div>
 
+    <!-- Step 2 -->
     <div id="qs-step-2" style="display:none;">
       <div class="card">
         <div class="card-header-purple"><span><i class="bi bi-cloud-upload me-2"></i>Upload Question Paper Files</span></div>
         <div class="card-body p-4">
           <div class="alert alert-info small mb-3">
             <i class="bi bi-info-circle-fill me-2"></i>
-            You can upload <strong>multiple files</strong> at once. Supported formats: <strong>JPG, PNG, WEBP, PDF, DOCX</strong>
+            Supported: <strong>JPG, PNG, WEBP, PDF, DOCX</strong> — multiple files at once
           </div>
           <div class="upload-zone" onclick="document.getElementById('file-input').click()" id="drop-zone">
             <i class="bi bi-cloud-arrow-up" style="font-size:2.5rem;color:#7c3aed;"></i>
             <p class="fw-semibold mt-2 mb-1">Click to upload or drag & drop</p>
-            <p class="text-muted small">JPG · PNG · WEBP · PDF · DOCX — Multiple files supported</p>
+            <p class="text-muted small">JPG · PNG · WEBP · PDF · DOCX</p>
           </div>
           <input type="file" id="file-input" accept="image/*,.pdf,.doc,.docx" multiple style="display:none" onchange="previewFiles(this)">
           <div id="file-preview-list" class="mt-3"></div>
@@ -281,6 +316,7 @@
       </div>
     </div>
 
+    <!-- Step 3 -->
     <div id="qs-step-3" style="display:none;">
       <div class="card">
         <div class="card-header-purple">
@@ -291,6 +327,7 @@
           <div class="alert alert-info d-flex align-items-center gap-2 mb-3 small">
             <i class="bi bi-info-circle-fill"></i>
             Questions marked with <span class="translated-badge ms-1 me-1">Auto Translated</span> were automatically translated.
+            You can also set <strong>Difficulty</strong>, <strong>Hints</strong> and <strong>Explanations</strong> per question below.
           </div>
           <div id="editor-container"></div>
         </div>
@@ -301,6 +338,7 @@
       </div>
     </div>
 
+    <!-- Step 4 -->
     <div id="qs-step-4" style="display:none;">
       <div class="card">
         <div class="card-header-purple"><span><i class="bi bi-check-circle me-2"></i>Question Set Saved!</span></div>
@@ -317,6 +355,7 @@
     </div>
   </div>
 
+  <!-- ─── SECTION: Edit Set ───────────────────────────────────────────────── -->
   <div class="section" id="sec-edit-set">
     <div class="card mb-3">
       <div class="card-header-purple">
@@ -326,7 +365,7 @@
       <div class="card-body p-4">
         <div class="alert alert-warning small mb-3">
           <i class="bi bi-exclamation-triangle-fill me-2"></i>
-          You can edit existing questions or upload more files to add new questions.
+          Edit questions or upload more files to add new ones.
         </div>
         <div id="edit-editor-container"></div>
         <div class="card mt-3 border">
@@ -360,23 +399,51 @@
     </div>
   </div>
 
+  <!-- ─── SECTION: View Set ───────────────────────────────────────────────── -->
   <div class="section" id="sec-view-set">
     <div class="card">
       <div class="card-header-purple">
         <span id="view-set-title"><i class="bi bi-eye me-2"></i>View Question Set</span>
-        <button class="btn btn-sm btn-light" onclick="showSection('course-detail')"><i class="bi bi-arrow-left me-1"></i>Back</button>
+        <div class="d-flex gap-2 align-items-center">
+          <span id="view-set-export"></span>
+          <button class="btn btn-sm btn-light" onclick="showSection('course-detail')"><i class="bi bi-arrow-left me-1"></i>Back</button>
+        </div>
       </div>
       <div class="card-body p-4" id="view-set-body"></div>
     </div>
   </div>
 
+  <!-- ─── SECTION: Quiz — Feature 1 (timer) ──────────────────────────────── -->
   <div class="section" id="sec-quiz">
     <div class="card">
-      <div class="card-header-purple d-flex justify-content-between align-items-center">
+      <div class="card-header-purple d-flex justify-content-between align-items-center flex-wrap gap-2">
         <span><i class="bi bi-question-circle me-2"></i>Answer the Questions</span>
         <span class="opacity-75 small" id="prog-label">0 / 0 answered</span>
       </div>
       <div class="card-body p-4">
+
+        <!-- Feature 1: Timer setup bar -->
+        <div class="timer-setup" id="quiz-timer-setup">
+          <div class="d-flex align-items-center gap-3 flex-wrap">
+            <div>
+              <label class="fw-semibold small mb-1 d-block">⏱ Set Quiz Timer</label>
+              <div class="d-flex align-items-center gap-2">
+                <input type="number" class="form-control form-control-sm" id="timer-minutes"
+                       style="width:80px;" min="1" max="180" value="10" placeholder="min">
+                <span class="small text-muted">minutes</span>
+              </div>
+            </div>
+            <div class="d-flex gap-2 align-items-end">
+              <button class="btn btn-sm text-white" style="background:#7c3aed;" onclick="startTimer()">
+                <i class="bi bi-play-fill me-1"></i>Start with Timer
+              </button>
+              <button class="btn btn-sm btn-outline-secondary" onclick="skipTimer()">
+                No Timer
+              </button>
+            </div>
+          </div>
+        </div>
+
         <div class="progress mb-4" style="height:6px;">
           <div class="progress-bar" id="prog-fill" style="width:0%;background:#7c3aed;"></div>
         </div>
@@ -389,6 +456,7 @@
     </div>
   </div>
 
+  <!-- ─── SECTION: Result — Feature 8 (explanation) ──────────────────────── -->
   <div class="section" id="sec-result">
     <div class="card">
       <div class="card-header-purple"><span><i class="bi bi-trophy me-2"></i>Quiz Result</span></div>
@@ -400,12 +468,136 @@
         <div id="review"></div>
       </div>
       <div class="card-footer bg-white d-flex justify-content-end gap-2 p-3">
+        <button class="btn btn-outline-secondary" onclick="showSection('history')"><i class="bi bi-clock-history me-1"></i>View History</button>
         <button class="btn btn-outline-secondary" onclick="showSection('course-detail')">Back to Course</button>
       </div>
     </div>
   </div>
-</div>
-</div>
+
+  <!-- ─── SECTION: Feature 4 — Attempt History ────────────────────────────── -->
+  <div class="section" id="sec-history">
+    <div class="card">
+      <div class="card-header-purple">
+        <span><i class="bi bi-clock-history me-2"></i>Attempt History</span>
+        <button class="btn btn-sm btn-light" onclick="loadHistory()"><i class="bi bi-arrow-clockwise me-1"></i>Refresh</button>
+      </div>
+      <div class="card-body p-0">
+        <div class="table-responsive">
+          <table class="table table-hover mb-0">
+            <thead class="table-light">
+              <tr>
+                <th class="small">Date</th>
+                <th class="small">Student</th>
+                <th class="small">Course</th>
+                <th class="small">Question Set</th>
+                <th class="small">Score</th>
+                <th class="small">%</th>
+                <th class="small">Time Taken</th>
+              </tr>
+            </thead>
+            <tbody id="history-body">
+              <tr><td colspan="7" class="text-center text-muted py-4">Loading…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SECTION: Feature 5 — Question Bank Search ───────────────────────── -->
+  <div class="section" id="sec-search">
+    <div class="card mb-3">
+      <div class="card-header-purple"><span><i class="bi bi-search me-2"></i>Question Bank Search</span></div>
+      <div class="card-body p-4">
+        <div class="search-bar-wrap mb-4">
+          <i class="bi bi-search"></i>
+          <input type="text" class="form-control search-input" id="search-input"
+                 placeholder="Search questions by keyword across all sets…"
+                 oninput="onSearchInput()">
+        </div>
+        <div id="search-results"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SECTION: Feature 9 — Analytics Dashboard ────────────────────────── -->
+  <div class="section" id="sec-analytics">
+    <div class="card mb-3">
+      <div class="card-header-purple">
+        <span><i class="bi bi-bar-chart-line me-2"></i>Analytics Dashboard</span>
+        <button class="btn btn-sm btn-light" onclick="loadAnalytics()"><i class="bi bi-arrow-clockwise me-1"></i>Refresh</button>
+      </div>
+      <div class="card-body p-4">
+
+        <!-- KPI cards -->
+        <div class="row g-3 mb-4">
+          <div class="col-md-4">
+            <div class="analytics-stat">
+              <div class="big-num" id="an-total">—</div>
+              <div class="label">Total Attempts</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="analytics-stat">
+              <div class="big-num" id="an-avg">—</div>
+              <div class="label">Average Score</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="analytics-stat">
+              <div class="big-num" id="an-pass">—</div>
+              <div class="label">Pass Rate (≥60%)</div>
+              <div class="bar-track mt-2"><div class="bar-fill green" id="an-pass-bar" style="width:0%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Per set performance -->
+        <h6 class="fw-semibold mb-2">Performance by Question Set</h6>
+        <div class="table-responsive mb-4">
+          <table class="table table-sm table-hover">
+            <thead class="table-light"><tr><th>Question Set</th><th>Attempts</th><th style="min-width:200px;">Avg Score</th></tr></thead>
+            <tbody id="an-by-set"></tbody>
+          </table>
+        </div>
+
+        <!-- Per student (teacher only) -->
+        <div id="an-student-section" style="display:none;">
+          <h6 class="fw-semibold mb-2">Performance by Student</h6>
+          <div class="table-responsive mb-4">
+            <table class="table table-sm table-hover">
+              <thead class="table-light"><tr><th>Student</th><th>Attempts</th><th style="min-width:200px;">Avg Score</th></tr></thead>
+              <tbody id="an-by-student"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Recent attempts -->
+        <h6 class="fw-semibold mb-2">Recent Attempts</h6>
+        <div class="table-responsive">
+          <table class="table table-sm table-hover">
+            <thead class="table-light"><tr><th>Date</th><th>Student</th><th>Set</th><th>Score</th><th>%</th></tr></thead>
+            <tbody id="an-recent"></tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SECTION: Feature 10 — Student Home ───────────────────────────────── -->
+  <div class="section" id="sec-student-home">
+    <div class="card">
+      <div class="card-header-purple"><span><i class="bi bi-mortarboard me-2"></i>Available Quizzes</span></div>
+      <div class="card-body p-4">
+        <p class="text-muted small mb-3">Pick a quiz below to start. Your results will be saved automatically.</p>
+        <div id="student-quiz-list"></div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /main-content -->
+</div><!-- /page-app -->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="/static/js/app.js"></script>
